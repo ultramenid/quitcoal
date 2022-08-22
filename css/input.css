@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-xss {
+    font-size: 0.55rem/* 12px */;
+    line-height: 1rem/* 16px */;
+}
+
+.border-y-quitcoal {
+    border-top-width: 0.5px;
+    border-bottom-width: 0.5px;
+}
+.border-b-quitcoal {
+    border-bottom-width: 0.5px;
+}
+
+@layer components {
+    .h-paralax{
+        height: 60vh;
+    }
+}
+
+.h-106 {
+    height: 29rem/* 384px */;
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index - Quitcoal</title>
+    <link href="css/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+<body class="font-sans">
+    
+    <!-- header small screen -->
+    <header class="bg-white sm:hidden block z-20 fixed top-0 w-full shadow-sm" x-data="{nav:false,background:false,coalruption:false, data:false }" @click.away="nav=false">
+        <div class="w-full flex justify-between items-center px-4 py-2">
+            <a class="font-semibold">Menu</a>
+            <svg @click="nav =! nav" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+              </svg>
+        </div>  
+        <div class="w-full flex flex-col " x-show="nav" style="display: none;">
+            <!-- nav about -->
+            <div class="border-y-quitcoal border-black px-4 py-2">
+                <div class="w-full flex justify-between">
+                    <a href="#" class="text-sm font-light">ABOUT</a>
+                </div>
+            </div>
+            <!-- nav background -->
+            <div class=" border-b-quitcoal border-black px-4 py-2">
+                <div class="w-full flex justify-between">
+                    <a class="text-sm font-light">BACKGROUND</a>
+                    <svg @click="background =! background" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                </div>
+            </div>
+                <!-- subnav background -->
+                <div class="bg-black" x-show="background">
+                    <div class="border-b-quitcoal border-white px-4 py-2 text-white">
+                        <div class="w-full flex justify-between  pl-6">
+                            <a href="#" class="text-sm font-light">COALCROWD</a>
+                        </div>
+                    </div>
+                    <div class="border-b-quitcoal border-white px-4 py-2 text-white">
+                        <div class="w-full flex justify-between  pl-6">
+                            <a href="#" class="text-sm font-light">COAL PERMIT</a>
+                        </div>
+                    </div>
+                    <div class="border-b-quitcoal border-white px-4 py-2 text-white">
+                        <div class="w-full flex justify-between  pl-6">
+                            <a href="#" class="text-sm font-light">REGULATION</a>
+                        </div>
+                    </div>
+                    <div class="border-b-quitcoal border-white px-4 py-2 text-white">
+                        <div class="w-full flex justify-between  pl-6">
+                            <a href="#" class="text-sm font-light">BENCHMARK PRICE</a>
+                        </div>
+                    </div>
+                    <div class="border-b-quitcoal border-white px-4 py-2 text-white">
+                        <div class="w-full flex justify-between  pl-6">
+                            <a href="#" class="text-sm font-light">COAL PRODUCTION</a>
+                        </div>
+                    </div>
+                    <div class="border-b-quitcoal border-white px-4 py-2 text-white">
+                        <div class="w-full flex justify-between  pl-6">
+                            <a href="#" class="text-sm font-light">COAL CONSUMPTION</a>
+                        </div>
+                    </div>
+                    <div class="border-b-quitcoal border-white px-4 py-2 text-white">
+                        <div class="w-full flex justify-between  pl-6">
+                            <a href="#" class="text-sm font-light">MINING AND DEFORESTATION</a>
+                        </div>
+                    </div>
+                </div>
+                
+            <!-- nav coal-ruption  -->
+            <div class=" border-b-quitcoal border-black px-4 py-2">
+                <div class="w-full flex justify-between">
+                    <a class="text-sm font-light">COAL - RUPTION</a>
+                    <svg @click="coalruption =! coalruption" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                </div>
+            </div>
+                <!-- subnav coal-ruption -->
+                <div class="bg-black" x-show="coalruption">
+                    <div class="border-b-quitcoal border-white px-4 py-2 text-white">
+                        <div class="w-full flex justify-between  pl-6">
+                            <a href="#" class="text-sm font-light">CASE</a>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- nav action -->
+            <div class="border-b-quitcoal border-black px-4 py-2">
+                <div class="w-full flex justify-between">
+                    <a href="#" class="text-sm font-light">ACTION</a>
+                </div>
+            </div>
+            <!-- nav data-->
+            <div class=" border-b-quitcoal border-black px-4 py-2">
+                <div class="w-full flex justify-between">
+                    <a class="text-sm font-light">DATA</a>
+                    <svg @click="data =! data" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                </div>
+            </div>
+                <!-- subnav data -->
+                <div class="bg-black" x-show="data">
+                    <div class="border-b-quitcoal border-white px-4 py-2 text-white">
+                        <div class="w-full flex justify-between  pl-6">
+                            <a href="#" class="text-sm font-light">RESOURCES</a>
+                        </div>
+                    </div>
+                    <div class="border-b-quitcoal border-white px-4 py-2 text-white">
+                        <div class="w-full flex justify-between  pl-6">
+                            <a href="#" class="text-sm font-light">CHECK PLTU</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </header>
+    <!-- topbar check pltu -->
+    <div class="bg-red-600 flex justify-center py-2 px-4 sm:mt-0 mt-11 text-white">
+        <a href="#" class="sm:text-xl text-sm flex space-x-2"><p class="font-extrabold">CEK PLTU:</p> <p class="font-light">CHECK OUR DATA BASE COAL POWER PLANT</p></a>
+    </div>
+
+    <!-- header large screen -->
+    <header class="bg-black ">
+        <div class="max-w-5xl mx-auto px-4 py-8">
+            <div class="flex items-center w-full justify-between">
+                <h1 class="font-bold text-white sm:text-base text-xss">SENIN,1 MARET 2020</h1>
+                <h1 class="sm:text-7xl text-2xl font-bold text-white">QUITCOAL</h1>
+                <div class="flex space-x-4">
+                    <a href="#">
+                        <img src="assets/ig.png" alt="quitcoal" class="sm:h-4 h-2">
+                    </a>
+                    <a href="#">
+                        <img src="assets/facebook.svg" alt="quitcoal" class="sm:h-4 h-2">
+                    </a>
+                    <a href="#">
+                        <img src="assets/twitter.svg" alt="quitcoal" class="sm:h-4 h-2">
+                    </a>
+                </div>
+            </div>
+            <div class="sm:flex hidden  items-center w-full justify-between select-none text-white py-4 mt-4" x-data="{open:false}">
+                <a href="#">ABOUT</a>
+
+                <div class="flex-col flex items-center whitespace-nowrap" x-data="{peta:false}">
+                    <a @click="peta = ! peta" @click.away="peta=false" class="z-20  text-white cursor-pointer inline-flex  items-center sm:text-base text-xs" >
+                    BACKGROUND
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <div class="absolute mt-8 z-20 bg-white shadow rounded px-4 py-4 w-56 " x-show="peta" x-cloak style="display: none !important">
+                        <div class=" py-2 border-b border-black" >
+                            <a href="#" class="text-sm text-gray-900">
+                            COALCROWD
+                            </a>
+                        </div>
+                        <div class=" py-2 border-b border-black" >
+                            <a href="#" class="text-sm text-gray-900">
+                            COAL PERMIT
+                            </a>
+                        </div>
+                        <div class=" py-2 border-b border-black" >
+                            <a href="#" class="text-sm text-gray-900">
+                               REGULATION
+                            </a>
+                        </div>
+                        <div class=" py-2 border-b border-black" >
+                            <a href="#" class="text-sm text-gray-900">
+                            BENCHMARK PRICE
+                            </a>
+                        </div>
+                        <div class=" py-2 border-b border-black" >
+                            <a href="#" class="text-sm text-gray-900">
+                                COAL PRODUCTION
+                            </a>
+                        </div>
+                        <div class=" py-2 border-b border-black" >
+                            <a href="#" class="text-sm text-gray-900">
+                                COAL CONSUMPTION
+                            </a>
+                        </div>
+                        <div class=" py-2 border-b border-black" >
+                            <a href="#" class="text-sm text-gray-900">
+                                MINING AND DEFORESTATION
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-col flex items-center whitespace-nowrap" x-data="{peta:false}">
+                    <a @click="peta = ! peta" @click.away="peta=false" class="z-20  text-white cursor-pointer inline-flex  items-center sm:text-base text-xs" >
+                    COAL - RUPTION
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <div class="absolute mt-8 z-20 bg-white shadow rounded px-4 py-4 w-56 " x-show="peta" x-cloak style="display: none !important">
+                        <div class=" py-2 border-b border-black" >
+                            <a href="#" class="text-sm text-gray-900">
+                            CASES
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">ACTION</a>
+                <div class="flex-col flex items-center whitespace-nowrap" x-data="{peta:false}">
+                    <a @click="peta = ! peta" @click.away="peta=false" class="z-20  text-white cursor-pointer inline-flex  items-center sm:text-base text-xs" >
+                    DATA
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <div class="absolute mt-8 z-20 bg-white shadow rounded px-4 py-4 w-56 " x-show="peta" x-cloak style="display: none !important">
+                        <div class=" py-2 border-b border-black" >
+                            <a href="#" class="text-sm text-gray-900">
+                                RESOURCES
+                            </a>
+                        </div>
+                        <div class=" py-2 border-b border-black" >
+                            <a href="#" class="text-sm text-gray-900">
+                                CHECK PLTU
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-4 py-2" x-data="{search:false}" @click.away="search=false">
+                    <svg @click="search=true" xmlns="http://www.w3.org/2000/svg" :class="(search) ? 'hidden' : 'h-6 w-6 cursor-pointer'" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                      <div class="w-52  flex items-center  relative" x-show="search" style="display: none;">
+                        <div class="bg-white z-10 absolute right-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-5 text-black" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <input name="search" class="border border-white px-2 py-1 bg-white rounded-lg focus:outline-none w-full text-black text-xs" type="text" placeholder="Search. . .">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-4 py-12">
+        
+
+        <div class="grid sm:grid-cols-4 grid-cols-1 gap-6 mt-6">
+            <div class="sm:col-span-3 col-span-1">
+                <div class="flex flex-col space-y-4">
+                    <img src="assets/ngopini2.jpeg" alt="" class="w-full h-full">
+                    <h1 class="font-extrabold text-2xl font-notoserif ">HGU: Jalan Berliku Menuju Transparansi HGU:
+                        Jalan Berliku Menuju Transparansi</h1>
+                    <p>Sebelum dilepasliarkan, orangutan ini melakukan perjalanan melalui darat maupun air
+                        hingga sampai ke lokasi habitatnya dengan waktu tempuh sekitar 15 jam. “Sebelumnya
+                        3 individu orangutan ini telah menjalani proses rehabilitasi bertahun-tahun di Nyaru
+                        Menteng,” kata CEO Yayasan BOS, Jamartin Sihite, Kamis 20 Februari 2020.</p>
+                    <p>Dalam proses rahabilitasi sebelum dilepasliarkan ke habitatnya, terlebih dulu individu
+                        orangutan melewati beberapa tahapan di antaranya mengikuti sekolah hutan.</p>
+                    <p>“Proses rehabilitasil tersebut dimulai dari sekolah hutan sampai pra-pelepasliaran,”
+                        katanya.</p>
+                    <p>
+                        Seluruh Individu orangutan yang dlepasliarkan di Taman Nasional Bukit Baka Bukit Raya Kabupaten Katingan telah melalui semua tahapan proses tersebut.
+                    </p>
+                    
+                </div>
+                <!-- box button -->
+                <div class="w-96 mx-auto mt-12">
+                    <div class="flex w-full justify-between">
+                        <div class="flex space-x-6 items-center font-light text-sm ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                              </svg>
+                              Like
+                        </div>
+                        <div class="flex space-x-6 items-center font-light text-sm ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                              </svg>
+                              Share
+                        </div>
+                        <div class="flex space-x-6 items-center font-light text-sm ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                              </svg>
+                              Download
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- box comment -->
+                <div>
+                    <textarea name="" id="" rows="6" class=" text-sm whitespace-pre	 w-full border border-gray-300 focus:outline-none mt-6 px-2 py-1 rounded" placeholder="Type your comment here"></textarea>  
+                    <div class="flex w-full justify-end">
+                        <button class="px-4 py-2 bg-gray-500 text-white">SEND COMMENT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-1 flex flex-col space-y-4 sm:px-6 sm:border-l  border-black">
+                <div class="flex flex-col space-y-2">
+                    <a href="#">
+                        <img src="assets/ngopini2.jpeg" alt="PLTU: pensiun dini atau pensiun alami?" class="w-full h-full">
+                    </a>
+                    <a href="#" class="font-notoserif font-bold text-sm">PLTU: pensiun dini atau pensiun alami?</a>
+                    
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <a href="#">
+                        <img src="assets/ngopini2.jpeg" alt="PLTU: pensiun dini atau pensiun alami?" class="w-full h-full">
+                    </a>
+                    <a href="#" class="font-notoserif font-bold text-sm">PLTU: pensiun dini atau pensiun alami?</a>
+                    
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <a href="#">
+                        <img src="assets/ngopini2.jpeg" alt="PLTU: pensiun dini atau pensiun alami?" class="w-full h-full">
+                    </a>
+                    <a href="#" class="font-notoserif font-bold text-sm">PLTU: pensiun dini atau pensiun alami?</a>
+                    
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <a href="#">
+                        <img src="assets/ngopini2.jpeg" alt="PLTU: pensiun dini atau pensiun alami?" class="w-full h-full">
+                    </a>
+                    <a href="#" class="font-notoserif font-bold text-sm">PLTU: pensiun dini atau pensiun alami?</a>
+                    
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <a href="#">
+                        <img src="assets/ngopini2.jpeg" alt="PLTU: pensiun dini atau pensiun alami?" class="w-full h-full">
+                    </a>
+                    <a href="#" class="font-notoserif font-bold text-sm">PLTU: pensiun dini atau pensiun alami?</a>
+                    
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <a href="#">
+                        <img src="assets/ngopini2.jpeg" alt="PLTU: pensiun dini atau pensiun alami?" class="w-full h-full">
+                    </a>
+                    <a href="#" class="font-notoserif font-bold text-sm">PLTU: pensiun dini atau pensiun alami?</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-black">
+        <div class="max-w-5xl mx-auto px-4 py-8 w-full flex sm:flex-row flex-col justify-between">
+            <div class="flex flex-col space-y-4">
+                <h1 class="text-white font-bold text-4xl">QUITCOAL</h1>
+                <div class="sm:w-64 w-full">
+                    <p class=" text-white">Menghadirkan energi bersih, terbarukan, dan berkeadilan di Indonesia</p>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-3 sm:text-right text-left mt-4 text-white">
+                <a>ABOUT</a>
+                <a>BACKGROUND</a>
+                <a>COAL-RUPTION</a>
+                <a>ACTION</a>
+                <a>DATA</a>
+                <div class="flex sm:justify-end justify-start space-x-4">
+                    <a href="#">
+                        <img src="assets/ig.png" alt="quitcoal" class="sm:h-4 h-2">
+                    </a>
+                    <a href="#">
+                        <img src="assets/facebook.svg" alt="quitcoal" class="sm:h-4 h-2">
+                    </a>
+                    <a href="#">
+                        <img src="assets/twitter.svg" alt="quitcoal" class="sm:h-4 h-2">
+                    </a>
+                </div>
+                <p>©2020 Quitcoal. Hak cipta dilindungi Undang-undang. <a class="font-extrabold">Kebijakan Privasi</a> | <a class="font-extrabold">Disclaimer</a></p>
+            </div>
+        </div> 
+    </footer>
+    
+</body>
+</html>
